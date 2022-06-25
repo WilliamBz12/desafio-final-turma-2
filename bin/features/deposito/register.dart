@@ -1,6 +1,5 @@
 import '../../util/read_line.dart';
-import '../../variables/usuarios_pre_definidos.dart';
-
+import '../../variables/users.dart';
 
 void register() {
   print("--------------------------------------------------");
@@ -17,7 +16,7 @@ void register() {
 
   int digit = readInt(message: "Digite o Digito da conta:? ");
 
-  bool welcome = bills.any((element) =>
+  bool welcome = users.any((element) =>
       element["Nome"] == name &&
       element["Agencia"] == agency &&
       element["conta"] == account &&

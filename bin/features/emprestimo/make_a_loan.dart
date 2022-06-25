@@ -1,8 +1,7 @@
-import 'dart:io';
 import '../../util/clean.dart';
 import '../../variables/caluladora_do_saldo.dart';
-import '../../variables/usuarios_pre_definidos.dart';
 import '../../util/read_line.dart';
+import '../../variables/users.dart';
 
 void empresta(double value, int time, double tax, double salary) {
   tax = (tax / 100);
@@ -14,7 +13,7 @@ void empresta(double value, int time, double tax, double salary) {
   int parcelas = time * 12;
   double installmentValue = value / parcelas;
   clean();
-  if (installmentValue <= salary && bills[1]["password"] == password) {
+  if (installmentValue <= salary && users[1]["password"] == password) {
     //esse biils e uma list com maps de dados do usuario
     print("Empréstimo_aceito");
     loan.add({
@@ -27,9 +26,9 @@ void empresta(double value, int time, double tax, double salary) {
       "taxa_de_juros_anual": tax * 100
     });
     Map<String, dynamic> valor = {
-    "valor": emprestimoPedido,
-  };
-  money1.add(valor);
+      "valor": emprestimoPedido,
+    };
+    money1.add(valor);
   } else {
     print("Empréstimo Recusado");
     loanError.add({
@@ -50,16 +49,14 @@ void informations() {
   double value = readDouble(message: "Qual o valor do empréstimo? ");
   int time = 6;
   while (time > 5) {
-    time = readInt (message: "Em quantos anos deseja paga?");
+    time = readInt(message: "Em quantos anos deseja paga?");
     if (time > 5) print("O tempo de pagamento se limita a 5 anos ou menos");
   }
-  double salary = readDouble (message: "Qual sua renda mensal?");
+  double salary = readDouble(message: "Qual sua renda mensal?");
   print(
-      "Usuário : ${bills[1]["Nome"]}"); //esse biils e uma list com maps de dados do usuario
+      "Usuário : ${users[1]["Nome"]}"); //esse biils e uma list com maps de dados do usuario
   password = readInt(message: "Digite sua senha:");
   empresta(value, time, 12, salary);
-
-  
 }
 
 int password = 0;

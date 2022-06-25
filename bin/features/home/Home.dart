@@ -1,7 +1,7 @@
-
 import '../../util/clean.dart';
 import '../../util/read_line.dart';
 import '../../variables/caluladora_do_saldo.dart';
+import '../../variables/users.dart';
 import '../emprestimo/init.dart';
 import '../deposito/void.dart';
 import '../saldo e extrato/extrato.dart';
@@ -11,6 +11,7 @@ void home() {
   print("---------    Bem vindo ao Sabb Bank      --------------");
   print("-------------------------------------------------------");
 
+  print(currentUser["nome"]);
   print("Seu saldo é de: ${mostra()}");
   print("Temos essas opções para voce escolher: ");
 
