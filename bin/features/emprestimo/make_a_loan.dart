@@ -13,7 +13,7 @@ void empresta(double value, int time, double tax, double salary) {
   int parcelas = time * 12;
   double installmentValue = value / parcelas;
   clean();
-  if (installmentValue <= salary && users[1]["password"] == password) {
+  if (installmentValue <= salary && currentUser["senha"] == password) {
     //esse biils e uma list com maps de dados do usuario
     print("Empréstimo_aceito");
     loan.add({
@@ -54,9 +54,9 @@ void informations() {
   }
   double salary = readDouble(message: "Qual sua renda mensal?");
   print(
-      "Usuário : ${users[1]["Nome"]}"); //esse biils e uma list com maps de dados do usuario
-  password = readInt(message: "Digite sua senha:");
+      "Usuário : ${currentUser["nome"]}"); //esse biils e uma list com maps de dados do usuario
+  password = readString(message: "Digite sua senha:");
   empresta(value, time, 12, salary);
 }
 
-int password = 0;
+String password = "";
