@@ -1,9 +1,10 @@
-
 List<Map<String, dynamic>> allDeposits = []; //aqui adiciona todos os depósitos
 List<Map<String, dynamic>> loan = [];
 List<Map<String, dynamic>> loanError = [];
-
 List<Map<String, dynamic>> money1 = [];
+
+double balance = mostra();
+late double valueTransfer;
 
 double mostra() {
   double saldo1 = 0;
@@ -12,4 +13,3 @@ double mostra() {
   }
   return saldo1;
 }
-

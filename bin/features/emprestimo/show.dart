@@ -1,9 +1,9 @@
-import '../../util/clean.dart';
+import '../../util/clean_screen.dart';
 import '../../variables/caluladora_do_saldo.dart';
 
 
 void vizualizar() {
-  clean();
+  cleanScreen();
   Map<String, dynamic> acessar;
   print("emprestimos aprovados");
   for (acessar in loan) {

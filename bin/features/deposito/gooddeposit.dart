@@ -1,4 +1,4 @@
-import '../../util/read_line.dart';
+import '../../util/read.dart';
 
 goodDeposit() {
   print("Escolha a conta para o deposito: ");

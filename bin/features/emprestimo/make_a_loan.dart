@@ -1,6 +1,6 @@
-import '../../util/clean.dart';
+import '../../util/clean_screen.dart';
+import '../../util/read.dart';
 import '../../variables/caluladora_do_saldo.dart';
-import '../../util/read_line.dart';
 import '../../variables/users.dart';
 
 void empresta(double value, int time, double tax, double salary) {
@@ -12,7 +12,7 @@ void empresta(double value, int time, double tax, double salary) {
   value += fees;
   int parcelas = time * 12;
   double installmentValue = value / parcelas;
-  clean();
+  cleanScreen();
   if (installmentValue <= salary && currentUser["senha"] == password) {
     //esse biils e uma list com maps de dados do usuario
     print("Empréstimo_aceito");

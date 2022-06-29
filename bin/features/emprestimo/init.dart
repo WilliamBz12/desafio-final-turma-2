@@ -1,9 +1,8 @@
-import 'dart:io';
-import '../../util/clean.dart';
+import '../../util/clean_screen.dart';
+import '../../util/read.dart';
 import 'show.dart';
 import 'make_a_loan.dart';
 import '../home/Home.dart';
-import '../../util/read_line.dart';
 
 void init() {
   int option = 0;
@@ -15,7 +14,7 @@ void init() {
     print("[2] Ver empréstimos.");
     print("[3] Voltar ao menu inicial.");
     option = readInt (message: "Escolha uma das opções acima:");
-    clean();
+    cleanScreen();
     if (option == 1) {
       informations();
     } else if (option == 2) {

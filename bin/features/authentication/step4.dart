@@ -21,6 +21,7 @@ void step4() {
     currentUser = users.firstWhere(
         (element) => element["email"] == email && element["senha"] == senha);
     home();
+    
   } else {
     print("usuario nao atenticado faca seu cadastro para acessar o app");
     step2();

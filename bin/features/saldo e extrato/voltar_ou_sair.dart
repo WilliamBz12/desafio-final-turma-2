@@ -1,6 +1,6 @@
-import '../../util/clean.dart';
+import '../../util/clean_screen.dart';
 import '../../util/linha.dart';
-import '../../util/read_line.dart';
+import '../../util/read.dart';
 import '../home/Home.dart';
 import '../saldo e extrato/extrato.dart';
 
@@ -16,11 +16,11 @@ void voltarOuSair() {
     linha();
     String answer = readString(message: "Tem certeza que deseja sair? s/n");
     if (answer == "n") {
-      clean();
+      cleanScreen();
       mostrarExtrato();
     }
     if (answer == "s") {
-      clean();
+      cleanScreen();
       linha();
       print("Thank you for using SABB BANK");
       linha();

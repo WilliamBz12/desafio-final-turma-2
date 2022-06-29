@@ -1,4 +1,4 @@
-import '../../util/read_line.dart';
+import '../../util/read.dart';
 import '../../variables/users.dart';
 
 void register() {

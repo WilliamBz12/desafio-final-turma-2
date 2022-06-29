@@ -9,13 +9,18 @@ void step2() {
   print("-----------------------");
   print("|2| para fazer cadastro");
   print("-----------------------");
+   print("-----------------------");
+  print("|3| Sair");
+  print("-----------------------");
 
   String? escolhatext = stdin.readLineSync();
   int escolha = int.tryParse(escolhatext ?? "0") ?? 0;
 
   if (escolha == 1) {
     step4();
-  } else {
-    step3();
+  } else if (escolha == 2) {
+     step3();
+    }else {
+   
   }
 }
