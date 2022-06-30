@@ -1,6 +1,6 @@
-import '../../../util/read.dart';
-import '../../../variables/users.dart';
-import '../variaveis/my_keys.dart';
+import '../../util/read.dart';
+import '../../variables/pix.dart';
+import '../../variables/users.dart';
 import 'pix_area.dart';
 
 void myKeysRegistered() {

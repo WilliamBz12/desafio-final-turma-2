@@ -1,1 +1,0 @@
-Map<String, dynamic> myKeys = {}; //Mapa com todas as chaves e todos os usuários

@@ -1,10 +1,7 @@
-import '../../../util/read.dart';
-import '../variaveis/keys_one_user.dart';
-import '../variaveis/my_keys.dart';
-import '../variaveis/new_key.dart';
-import '../variaveis/type_keys.dart';
+import '../../util/read.dart';
+import '../../variables/pix.dart';
+import '../../variables/users.dart';
 import 'keys_verification.dart';
-import '../../../variables/users.dart';
 import 'pix_area.dart';
 
 late String newKey;

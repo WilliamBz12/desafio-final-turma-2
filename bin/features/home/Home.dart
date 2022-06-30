@@ -5,20 +5,20 @@ import '../../variables/users.dart';
 import '../authentication/step2.dart';
 import '../emprestimo/init.dart';
 import '../deposito/void.dart';
-import '../pix/minhas_chaves/pix_area.dart';
+import '../pix/pix_area.dart';
 import '../saldo e extrato/extrato.dart';
 
+late double balance;
 void home() {
   print("-------------------------------------------------------");
   print("---------    Bem vindo ao Sabb Bank      --------------");
   print("-------------------------------------------------------");
 
-  print('${currentUser["nome"]} ${currentUser["sobrenome"]}');
-  print("Saldo R\$:$balance");
+  test();
   print("Menu:");
 
   print("(1). Pix");
-  print("(2). Depósito");  
+  print("(2). Depósito");
   print("(3). Emprestimo");
   print("(4). Trasferências");
   print("(5). Saldo e extrato");
@@ -48,5 +48,14 @@ void home() {
       break;
     default:
       home();
+  }
+}
+
+void test() {
+  if (balanceUSer[currentUser["nome"]] == null) {
+    print('Saldo ${currentUser["nome"]}: R\$ 0,0');
+  } else {
+    print(
+        'Saldo ${currentUser["nome"]}: R\$ ${balanceUSer[currentUser["nome"]]}');
   }
 }

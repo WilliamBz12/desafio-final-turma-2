@@ -1,7 +1,7 @@
-import '../../../util/read.dart';
-import '../../../variables/users.dart';
-import '../../home/Home.dart';
-import '../variaveis/my_keys.dart';
+import '../../util/read.dart';
+import '../../variables/pix.dart';
+import '../../variables/users.dart';
+import '../home/Home.dart';
 import 'my_keys_registered.dart';
 import 'register_new_key.dart';
 import 'transfer_pix.dart';
@@ -33,7 +33,7 @@ void pixMenuOne() {
 
 void pixMenuTwo() {
 
-  print('[1] Nova chave pix           [2] Minhas chaves pix\n'
+  print('[1] Nova chave pix            [2] Minhas chaves pix\n'
       '[3] Pagar com pix             [4] Voltar ao menu inicial');
   int option = readInt(message: 'Digite um opção:');
 

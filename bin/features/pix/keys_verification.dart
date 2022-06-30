@@ -1,12 +1,7 @@
-import '../../../util/read.dart';
-import '../../../variables/caluladora_do_saldo.dart';
-import '../../../variables/users.dart';
-import '../../deposito/deposito.dart';
-import '../../home/Home.dart';
-import '../variaveis/checklist.dart';
-import '../variaveis/keys_one_user.dart';
-import '../variaveis/new_key.dart';
-import '../variaveis/type_keys.dart';
+import '../../util/read.dart';
+import '../../variables/pix.dart';
+import '../../variables/users.dart';
+import '../home/Home.dart';
 import 'register_new_key.dart';
 
 bool sameKeys = true;
@@ -85,6 +80,7 @@ void cellVerification() {
         // addKey();
         if (!sameKeys) {
           type -= 1;
+          newKeyUser["saldo"] = balance;
           newKeyUser["usuário"] = currentUser["nome"];
           newKeyUser["tipo"] = typeKey[type];
           newKeyUser["chave"] = newKey;
@@ -118,6 +114,7 @@ void cfpCnpjVerification() {
       if (positiveKey) {
         if (!sameKeys) {
           type -= 1;
+          newKeyUser["saldo"] = balance;
           newKeyUser["usuário"] = currentUser["nome"];
           newKeyUser["tipo"] = typeKey[type];
           newKeyUser["chave"] = newKey;
